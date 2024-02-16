@@ -119,8 +119,11 @@ public class MenuJFrame extends javax.swing.JFrame {
     private void jButtonCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCalcularActionPerformed
         String ve = (String) jComboBoxVehiculo.getSelectedItem();
         Vehiculo v;
-        if (ve==1){
-        
+        if (ve=="Bus"){
+            v =new Bus(d double);
+        }
+        if (ve=="Taxi"){
+            v =new Taxi(d double);
         }
         
     }//GEN-LAST:event_jButtonCalcularActionPerformed
