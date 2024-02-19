@@ -4,6 +4,11 @@
  */
 package frontend;
 
+import backend.Bus;
+import backend.Precio;
+import backend.Taxi;
+import backend.Vehiculo;
+
 /**
  *
  * @author labctr
@@ -119,14 +124,15 @@ public class MenuJFrame extends javax.swing.JFrame {
     private void jButtonCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCalcularActionPerformed
         String ve = (String) jComboBoxVehiculo.getSelectedItem();
         double d = Double.parseDouble(jTextFieldDistancia.getText());
-        Vehiculo v;
-        if ("Bus".equals(ve)){
-            v =new Bus(d double);
+        Vehiculo v = null;
+        Precio pre = new Precio();
+        if (ve=="Bus"){
+            v =new Bus(d);
         }
-        if ("Taxi".equals(ve)){
-            v =new Taxi(d double);
+        if (ve=="Taxi"){
+            v =new Taxi(d);
         }
-        
+        jLabelSalida.setText(String.valueOf(pre.calcular(v)));
     }//GEN-LAST:event_jButtonCalcularActionPerformed
 
     /**
